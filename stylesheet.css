@@ -1,0 +1,271 @@
+:root{
+    --farbe1: #183B57;
+    --farbe2: #8a4267;
+    --farbe3: #f7f7f7;
+    --farbe4: #FF9142;
+    --farbe5: #2b2f42;
+    --farbe6: #81c2e7;
+    --farbe7: #426E24;
+
+    --blue: #16306b;
+    --orange: #E4A536;
+    --dark: #2D1D08;
+    --gray: #343a46;
+    --white: #FFFFFF;
+    
+}
+
+.gray{
+    background: var(--gray);
+
+   
+
+
+}
+
+.brown{
+    background-color: var(--braun);
+}
+.blue{
+    background-color: var(--blue);
+    
+}
+
+
+.radial_bg_blue{
+    background: -moz-radial-gradient(center, ellipse cover,  #16306b 0%, var(--gray) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  #16306b 0%,var(--gray) 100%);
+    background: radial-gradient(ellipse at center,  #16306b 0%,var(--gray) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( endColorstr='#16306b', startColorstr='#343a46',GradientType=1 );
+
+    background: #343a46;
+background: -moz-linear-gradient(-45deg,  #343a46 0%, #16306b 100%);
+background: -webkit-linear-gradient(-45deg,  #343a46 0%,#16306b 100%);
+background: linear-gradient(135deg,  #343a46 0%,#16306b 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a46', endColorstr='#16306b',GradientType=1 );
+
+
+}
+
+.radial_bg_white{
+    background: -moz-radial-gradient(center, ellipse cover,  #FFFFFF 0%, var(--gray) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  #FFFFFF 0%,var(--gray) 100%);
+    background: radial-gradient(ellipse at center,  #FFFFFF 0%,var(--gray) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( endColorstr='#16306b', startColorstr='#343a46',GradientType=1 );
+
+    background: #ffffff;
+    background: -moz-linear-gradient(45deg,  #ffffff 0%, #eae6e1 100%);
+    background: -webkit-linear-gradient(45deg,  #ffffff 0%,#eae6e1 100%);
+    background: linear-gradient(45deg,  #ffffff 0%,#eae6e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eae6e1',GradientType=1 );
+    
+
+    
+
+
+    
+
+
+
+
+}
+
+
+.fa-chevron-circle-down{
+    animation: scrolldown 2s infinite;
+}
+@keyframes scrolldown{
+    0% {
+        top: 0%;
+      }  
+    100% {
+        top: 20%;
+      }
+    
+      
+}
+
+
+
+      
+
+
+
+/*Font*/
+
+p{
+    font-size: 16px;
+    font-family: Alegreya Sans;
+}
+
+h1{
+    font-family: Bubbler One;
+}
+
+h2{
+    font-size: 60px;
+    
+}
+
+h3{
+    font-family: Alegreya Sans;
+    color: white;
+    font-size: 40px;
+    align-content: center;
+}
+
+.row{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.container-fluid{
+    position: relative;
+}
+
+body, html{
+    background-color: #FFFFFF;
+    height: 100%;
+}
+
+
+
+.info_header{
+    color: var(--white);
+    background-color: var(--orange);
+    
+    border-color: var(--white);
+    align-content: center;
+}
+
+.info_header_inverse{
+    color: var(--blue);
+    background-color: var(--orange);
+    
+    border-color: var(--blue);
+    align-content: center;
+}
+
+
+.skill{
+    color: var(--blue);
+}
+
+
+.progress{
+    background-color: var(--orange);
+    color: var(--orange);
+}
+
+
+
+#scrolldown_button { background: url(https://picsum.photos/1200/800?image=869) center center / cover no-repeat;}
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+  }
+  .demo a:hover {
+    opacity: .5;
+  }
+
+
+
+
+#header{
+    width: 100%;
+    height:800px;
+    margin: 0;
+    background-image: url("../../images/img1.jpg");
+    background-size: cover;
+}
+
+
+
+
+
+.navbar{
+   
+    background-color: rgba(100, 100, 100, 0.3);
+ 
+    
+
+    margin: 0;
+}
+
+
+#start_image{
+    background-image: url("../../images/Bild1.jpg") -o-linear-gradient(0.5, 0.9);
+    background-size: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    padding-right: 20%;
+ 
+}
+
+body{
+    background-color: var(--farbe1);
+}
+
+#header_text{
+    padding-top: 20%;
+    color: var(--farbe4);
+}
+
+
+
+
+
+
+.info_content{
+    background-color: var(--braun);
+    color: var(--farbe1);
+    text-align: center;
+   
+
+    
+}
+
+
+.info_footer{
+    color: var(--braun);
+    border: solid;
+    border-color: var(--blue);
+    height: 25%;
+    align-content: center;
+}
+#brown{
+    background-color: var(--dark);
+    color: var(--farbe3);
+    text-align: center;
+}
+
+
+#footer{
+    background-color: var(--farbe5)
+}
+
+
+
+  /* When you move the mouse over the icon, change color */
+  .nav_item:hover {
+    color: var(--orange) !important;
+    font-size: 110px !important;
+  }
+
+  .nav_select:hover{
+    color: var(--orange) !important;
+}
+
+
