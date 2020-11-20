@@ -30,45 +30,45 @@
 
 <script>
   $(document).ready(function () {
+    //$(".alert").alert();
+    setTimeout(function () {
+      $(".alert").hide();
+    }, 10);
 
+
+    $("#btn_projects").click(function () {
+      
+      $("#education").css('display', 'none');
+      $("#projects").css('display', 'inline');
+    })
     
+    $("#btn_education").click(function () {
+      
+      $("#education").css('display', 'inline');
+      $("#projects").css('display', 'none');
+    })
 
-    $("a").click(function (e) {
+
+
+    $(".scroll").click(function (e) {
       e.preventDefault();
-
       var aid = $(this).attr("href");
       $('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
     });
-
-
-   
-
-   
-
   });
-
-
-
-
-
-
-
-    //$(document).scroll(function(){
-     // console.log("LOL")
-      //$('body').scrollTo('#content')
-    //});
-
-
-
-
-
-
-
 </script>
 
 
 
 <body>
+
+  <!-- Alert -->
+  <div class="alert alert-danger text-center align-middle" role="alert"
+    style="position: fixed;width: 100%;  width: 80%; height:50%;top:20%; left: 10%;  z-index: 5;">
+    <br><br><h3 class="text-dark" style="opacity: 100%;">Hello and Welcome to my Porftolio Website!<br>
+      I'm just getting started with this project, so please excuse unfinished sections.<br><br>Thank you!</h3>
+  </div>
+
 
   <!-- Wrapper -->
   <div class="pos-f-t row" style="position:fixed; width:100%; height: 5%; z-index: 1; margin:0">
@@ -93,25 +93,25 @@
     <div class="collapse col-12 bg-dark" id="navbarToggleExternalContent">
       <div class="row">
         <div class=" p-4 col-3 text-center nav_select">
-          <a class="text-muted" href="#activities">
+          <a class="text-muted scroll" href="#activities">
             <i class="fa fa-user nav_item" style="font-size:48px;color:white"></i>
             <h5 class="text-white h4">What I'm doing.</h5>
           </a>
         </div>
         <div class="bg-dark p-4 col-3 text-center">
-          <a class="text-muted" href="#skills">
+          <a class="text-muted scroll" href="#skills">
             <i class="fa fa-sliders nav_item" style="font-size:48px;color:white"></i>
             <h5 class="text-white h4">My Skills.</h5>
           </a>
         </div>
         <div class=" p-4 col-3 text-center">
-          <a class="text-muted" href="#skills">
+          <a class="text-muted scroll" href="#skills">
             <i class="fa fa-list-alt nav_item" style="font-size:48px;color:white"></i>
             <h5 class="text-white h4">My CV.</h5>
           </a>
         </div>
         <div class="bg-dark p-4 col-3 text-center">
-          <a class="text-muted" href="#skills">
+          <a class="text-muted scroll" href="#skills">
             <i class="fa fa-heart nav_item" style="font-size:48px;color:white"></i>
             <h5 class="text-white h4">My interests.</h5>
           </a>
@@ -132,7 +132,7 @@
         Web Developer<br>&<br>Media Engineer
       </h4>
       <div class="pt-5" style="height: 20%; margin-top: 10%;">
-        <a href="#content_about" class="button"><span><i class="fa fa-chevron-circle-down"
+        <a href="#content_about" class="button scroll"><span><i class="fa fa-chevron-circle-down"
               style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
       </div>
 
@@ -155,9 +155,7 @@
       <div class="col-4 "></div>
     </div>
     <div class="row" style="height: 50%;">
-      <!-- Info1 -->
       <div class="col-2"></div>
-
       <div class="col-8  p-4">
         <h3 class="p-4 text-white">I'm a media student from Germany,
           specializing in digital creativity, UI/UX design and web development.
@@ -169,14 +167,10 @@
     <div class="row pt-4" style="height: 20%;">
       <!-- Info1 -->
       <div class="col-2"></div>
-
       <div class="col-8 ">
-
-
-        <a href="#content_skill" class="pt-4 button"><span><i id="scrollToSkills" class="fa fa-chevron-circle-down"
+        <a href="#content_skill" class="pt-4 button scroll"><span><i id="scrollToSkills" class="fa fa-chevron-circle-down"
               style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
       </div>
-
       <div class="col-2"> </div>
     </div>
   </div>
@@ -199,86 +193,113 @@
       <div class="col-8 ">
         <!-- Skill 1 -->
         <div class="skill row ">
-          <div class="col-md-1 skill_icon">
-            <i class="fa fa-book" style="font-size:40px;"></i>
-            <h4 class="">Java</h4>
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4 class="">Office 365</h4>
           </div>
-          <div class="col-md-10 skill_progress">
+          <div class="col-md-8 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
-                style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Very Good</div>
             </div>
           </div>
           <div class="col-md-10"></div>
         </div>
         <!-- Skill 2 -->
         <div class="skill row ">
-          <div class="col-md-1 skill_icon">
-            <i class="fa fa-book" style="font-size:40px;"></i>
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">Java</h4>
           </div>
-          <div class="col-md-10 skill_progress">
+          <div class="col-md-8 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
-                style="width: 44%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-            </div>
-          </div>
-          <div class="col-md-10"></div>
-        </div>
-        <!-- Skill 3 -->
-        <div class="skill row ">
-          <div class="col-md-1 skill_icon">
-            <i class="fa fa-book" style="font-size:40px;"></i>
-            <h4>Java</h4>
-          </div>
-          <div class="col-md-10 skill_progress">
-            <div class="progress" style="height: 20px">
-              <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
-                style="width: 56%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Good</div>
             </div>
           </div>
           <div class="col-md-10"></div>
         </div>
         <!-- Skill 4 -->
         <div class="skill row ">
-          <div class="col-md-1 skill_icon">
-            <i class="fa fa-book" style="font-size:40px;"></i>
-            <h4 class="">Java</h4>
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4 class="">HTML, CSS</h4>
           </div>
-          <div class="col-md-10 skill_progress">
+          <div class="col-md-8 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
-                style="width: 77%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Good</div>
+            </div>
+          </div>
+          <div class="col-md-10"></div>
+        </div>
+         <!-- Skill 3 -->
+         <div class="skill row ">
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4>JavaScript</h4>
+          </div>
+          <div class="col-md-8 skill_progress">
+            <div class="progress" style="height: 20px">
+              <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
+                style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
             </div>
           </div>
           <div class="col-md-10"></div>
         </div>
         <!-- Skill 5 -->
         <div class="skill row ">
-          <div class="col-md-1 skill_icon">
-            <i class="fa fa-book" style="font-size:40px;"></i>
-            <h4 class="">Java</h4>
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4 class="">Python</h4>
           </div>
-          <div class="col-md-10 skill_progress">
+          <div class="col-md-8 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
-                style="width: 66%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
             </div>
           </div>
           <div class="col-md-10"></div>
         </div>
 
+        <!-- Skill 6 -->
+        <div class="skill row ">
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4 class="">SQL</h4>
+          </div>
+          <div class="col-md-8 skill_progress">
+            <div class="progress" style="height: 20px">
+              <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
+                style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
+            </div>
+          </div>
+          <div class="col-md-10"></div>
+        </div>
+        <!-- Skill 7 -->
+        <div class="skill row ">
+          <div class="col-md-2 skill_icon">
+            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+            <h4 class="">React</h4>
+          </div>
+          <div class="col-md-8 skill_progress">
+            <div class="progress" style="height: 20px">
+              <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
+                style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+            </div>
+          </div>
+          <div class="col-md-10"></div>
+        </div>
       </div>
       <div class="col-2 ">
       </div>
     </div>
     <div class="row" style="height: 20%;">
-      <!-- Info1 -->
       <div class="col-2"></div>
 
       <div class="col-8 ">
 
-        <a href="#content_cv" class="pt-4 button"><span><i  class="fa fa-chevron-circle-down"
+        <a href="#content_cv" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
               style="position:relative; font-size: 60px; color:#16306b" href=></i></span></a>
       </div>
 
@@ -286,10 +307,10 @@
     </div>
   </div>
 
-  <!-- CV -->
+  <!-- Education -->
   <div class="container-fluid radial_bg_blue " style="padding-top: 5%; height:100%; align-items: center;"
     id="content_cv">
-    <div class="row" style="height: 30%;">
+    <div class="row" style="height: 15%;">
       <!-- Info1 -->
       <div class="col-4"></div>
       <div class="col-4  p-4">
@@ -299,31 +320,73 @@
       </div>
       <div class="col-4 "></div>
     </div>
-    <div class="row" style="height: 50%;">
+    <div class="row" style="height: 65%;">
       <!-- Info1 -->
       <div class="col-2"></div>
-
       <div class="col-8  p-4">
-        <h3 class="p-4 text-white">I'm a media student from Germany,
-          specializing in digital creativity, UI/UX design and web development.
+        <div class="p-4">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label id="btn_education" class="btn btn-warning active" >
+              <input type="radio" name="options" id="btn_education" autocomplete="off" checked>
+              <h4>Education</h4>
+            </label>
+            <label id="btn_projects" class="btn btn-warning">
+              <input type="radio" name="options" id="btn_projects" autocomplete="off">
+              <h4>Projects</h4>
+            </label>
+        </div>
+      </div>
+      <div id="education">
+        <h3 class="text-white">
+          Master of Arts: Media Culture & Economics (2018-2020)
         </h3>
+        <h4 class="text-white">
+          exp. Final Mark: 1,5 <br>
+          Master Thesis: Human-AI-Collaboration for Creative Writing <br>
+          Focus: Media Informatics, Digital Marketing, Data Science
+        </h4>
+        <br>
+        <h3 class="text-white">
+          Bachelor of Engineering: Media Engineering (2015-2018)
+        </h3>
+        <h4 class="text-white">
+          Final Mark: 1,4 <br>
+          Bachelor Thesis: Development of a web application for multi-streaming <br>
+          Focus: Multimedia Applications, Human-Computer Interaction, Audio-/Video-Technology
+        </h4>
       </div>
-      <div class="col-2 ">
+      <div id="projects" style="display: none">
+        <h3 class="text-white">
+          Internship: Cyprus University of Technology (2 months)
+        </h3>
+        <h4 class="text-white">
+          Development of a web server with Java EE<br>
+          Frontend development with HTML, CSS, JS<br>
+          Creating and integrating a database with MS SQL Server
+        </h4>
+        <br>
+        <h3 class="text-white">
+          Internship: Audi AG (6 months)
+        </h3>
+        <h4 class="text-white">
+          App development with Android Studio<br>
+          Creation of user-experience processes and design interfaces<br>
+          Rapid prototyping to implement innovative ideas in the radio/media sector
+        </h4>
       </div>
+
     </div>
-    <div class="row pt-4" style="height: 20%;">
-      <!-- Info1 -->
-      <div class="col-2"></div>
-
-      <div class="col-8 ">
-
-
-        <a href="#content_interest" class="pt-4 button"><span><i  class="fa fa-chevron-circle-down"
-              style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
-      </div>
-
-      <div class="col-2"> </div>
+    <div class="col-2 ">
     </div>
+  </div>
+  <div class="row pt-4" style="height: 20%;">
+    <div class="col-2"></div>
+    <div class="col-8 ">
+      <a href="#content_interest" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
+            style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
+    </div>
+    <div class="col-2"> </div>
+  </div>
   </div>
 
 
@@ -333,44 +396,47 @@
 
 
   <div class="container-fluid radial_bg_white " style="padding-top: 5%; height:100%; align-items: center;"
-  id="content_interest">
-  <div class="row" style="height: 20%;">
-    <!-- Info1 -->
-    <div class="col-4 "></div>
-    <div class="col-4  p-4">
-      <h2 class="info_header_inverse">
-        My Interests.
-      </h2>
+    id="content_interest">
+    <div class="row" style="height: 20%;">
+      <!-- Interests -->
+      <div class="col-4 "></div>
+      <div class="col-4  p-4">
+        <h2 class="info_header_inverse">
+          My Interests.
+        </h2>
+      </div>
+      <div class="col-4 "></div>
     </div>
-    <div class="col-4 "></div>
+    <div class="row pt-4" style="height: 60%;">
+
+      <div class="col-1"></div>
+      <div class="col-10 ">
+        <h3 style="color:#16306b">
+          <blockquote>
+            I am interested in combining <mark>modern technologies</mark> and <mark>creativity</mark> to achieve new possibilities in human-computer interaction.<br> 
+            I enjoy spending my free time in nature and I like to go <mark>hiking</mark> or do <mark>sports</mark> like soccer and volleyball. <br>
+            Otherwise I am interested in <mark>movies</mark>, <mark>books</mark> and <mark>games</mark> of different genres and with an interesting story.<br>
+            I love <mark>cooking</mark> and try to be <mark>sustainable</mark> in terms of my consumption.
+          </blockquote>
+        </h3>
+
+      </div>
+      <div class="col-1">
+      </div>
+    </div>
+    <div class="row" style="height: 20%;">
+      <!-- Info1 -->
+      <div class="col-2"></div>
+
+      <div class="col-8 ">
+
+        <a href="#footer" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
+              style="position:relative; font-size: 60px; color:#16306b" href=></i></span></a>
+      </div>
+
+      <div class="col-2"> </div>
+    </div>
   </div>
-  <div class="row pt-4" style="height: 60%;">
-
-    <div class="col-2 "></div>
-    <div class="col-8 ">
-      <h4 style="color:#16306b"> <br>I'm interested in the combination of modern technologies and creativity to accomplish a new way of
-        human-computer-interaction. <br>
-        Apart from this, I enjoy most of my time being outdoors. During the warmer months, I enjoy hiking. <br>
-        In winter times, I follow a number of sci-fi and fantasy genre movies and television shows. I love cooking and
-        trying out new things. </h4>   
-
-    </div>
-    <div class="col-2 ">
-    </div>
-  </div>
-  <div class="row" style="height: 20%;">
-    <!-- Info1 -->
-    <div class="col-2"></div>
-
-    <div class="col-8 ">
-
-      <a href="#content_cv" class="pt-4 button"><span><i class="fa fa-chevron-circle-down"
-            style="position:relative; font-size: 60px; color:#16306b" href=></i></span></a>
-    </div>
-
-    <div class="col-2"> </div>
-  </div>
-</div>
 
 
 
@@ -378,8 +444,6 @@
   <footer class="container-fluid " id="footer">
     <div class="row p-4 gray">
       <div class="col-6 col-md-2">
-
-
       </div>
       <div class="col-6 col-md-4 text-white text-center">
         <h3>About Me</h3>
@@ -389,9 +453,9 @@
         <h3>Contact</h3>
         <div class="row text-center">
           <div class="col-md-3"></div>
-          <div class="col-md-2"><i href="#" class="fa fa-envelope" style="color:white; font-size: 40px;"></i> </div>
-          <div class="col-md-2"><i href="#" class="fa fa-linkedin" style="color:white;  font-size: 40px;"></i> </div>
-          <div class="col-md-2"><i href="#" class="fa fa-xing" style="color:white;  font-size: 40px;"></i> </div>
+          <div class="col-md-2"><a href="mailto:oliver.schmitt.de@outlook.de"><i type="button" class="fa fa-envelope" style="color:white; font-size: 40px;"></i></a> </div>
+          <div class="col-md-2"><a href="https://www.linkedin.com/in/oliver-schmitt-de/"><i type="button" class="fa fa-linkedin" style="color:white;  font-size: 40px;"></i></a> </div>
+          <div class="col-md-2"><a href="https://www.xing.com/profile/Oliver_Schmitt124"><i type="button" class="fa fa-xing" style="color:white;  font-size: 40px;"></i></a> </div>
           <div class="col-md-3"></div>
         </div>
       </div>
