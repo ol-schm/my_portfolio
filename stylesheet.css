@@ -43,6 +43,56 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eae6e1',GradientType=1 );
 }
 
+@media only screen and (max-width: 600px) {
+
+  #header_middle, #header_right{
+    display: none;
+  }
+
+  h1{
+    font-size: 50px !important;
+  }
+  h2{
+    font-size: 40px !important;
+  }
+  h3{
+    font-size: 30px !important;
+  }
+  h4{
+    font-size: 25px !important;
+  }
+  h5{
+    font-size: 20px !important;
+  }
+  h6{
+    font-size: 15px !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 601px) {
+  h1{
+    font-size: 100px !important;
+  }
+  h2{
+    font-size: 70px !important;
+  }
+  h3{
+    font-size: 50px !important;
+  }
+  h4{
+    font-size: 30px !important;
+  }
+  h5{
+    font-size: 25px !important;
+  }
+  h6{
+    font-size: 20px !important;
+  }
+}
+
+
 .fa-chevron-circle-down {
   animation: scrolldown 2s infinite;
 }
@@ -70,6 +120,7 @@
 mark {
   color: var(--orange);
   background-color: var(--blue);
+
 }
 
 /*Font*/
@@ -218,7 +269,6 @@ body {
 /* When you move the mouse over the icon, change color */
 .nav_item:hover {
   color: var(--orange) !important;
-  font-size: 110px !important;
 }
 
 .nav_select:hover {
