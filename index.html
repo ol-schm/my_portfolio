@@ -8,9 +8,17 @@
   <title>Portfolio</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+
+  <!-- Import of Stylesheet, Fonts, Scripts and Graphics -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubbler_One">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=AlegreyaSans">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheet.css" />
 
   <script src="./scripts/jQuery.js"></script>
 
@@ -18,38 +26,38 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./stylesheet.css" />
-  <!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
 </head>
 
 
 
+<!-- JS-Code -->
 <script>
+
   $(document).ready(function () {
     //$(".alert").alert();
-    setTimeout(function () {
-      $(".alert").hide();
-    }, 2000);
+    //setTimeout(function () {
+    //  $(".alert").hide();
+    //}, 2000);
 
 
+
+    //Make project-Radio-Button clickable
+    //ToDo: Use toggle-function
     $("#btn_projects").click(function () {
-      
       $("#education").css('display', 'none');
       $("#projects").css('display', 'inline');
     })
-    
     $("#btn_education").click(function () {
-      
       $("#education").css('display', 'inline');
       $("#projects").css('display', 'none');
     })
 
+    $('.nav_item').on('click', function(){
+      $('.collapse').collapse('hide');
+  });
 
 
+    //Create Scroll-Aninamtion
     $(".scroll").click(function (e) {
       e.preventDefault();
       var aid = $(this).attr("href");
@@ -62,284 +70,281 @@
 
 <body>
 
-  <!-- Alert 
-  <div class="alert alert-info text-center align-middle" role="alert"
-    style="position: fixed;width: 100%;  width: 60%; height:20%;top:10%; left: 20%;  z-index: 5;">
-    <br><br><h3 class="text-dark" style="opacity: 100%;">Hello and Welcome to my Porftolio Website!<br>
-      I'm just getting started with this project, so please excuse unfinished sections.<br><br>Thank you!</h3>
-  </div>
-  --> 
-
-  <!-- Wrapper -->
-  <div class="pos-f-t row" style="position:fixed; width:100%; height: 5%; z-index: 1; margin:0">
-    <nav class="navbar navbar-dark col-12 row">
-
-
+  <!-- Navigation -->
+  <div class="pos-f-t row" id="navigation">
+    <nav class="navbar navbar-dark row col-12">
       <button class="navbar-toggler col-md-1 col-sm-2" type="button" data-toggle="collapse"
         data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="col-md-2 col-sm-0">
-      </div>
-      <h5 class="text-center text-red col-md-6 col-sm-0" id="header_middle">
-        
-      </h5>
-      <h4 class="text-right text-white col-md-3 col-sm-0" id="header_right">
+      <div class="col-md-7 col-sm-1"></div>
+      <h4 class="text-right text-white col-md-4 col-sm-4" id="header_right">
         &copy; Oliver Schmitt 2020
       </h4>
-
     </nav>
     <div class="collapse col-12 bg-dark" id="navbarToggleExternalContent">
       <div class="row">
         <div class=" p-4 col-3 text-center nav_select">
-          <a class="text-muted scroll nav_item" href="#activities">
+          <a class="text-muted scroll nav_item" href="#content_about" data-toggle="collapse">
             <i class="fa fa-user nav_item" style="font-size:48px;color:white"></i>
-            <h5 class="text-white h4">What I'm doing.</h5>
+            <h5 class="text-white h4">About Me.</h5>
           </a>
         </div>
         <div class="bg-dark p-4 col-3 text-center">
-          <a class="text-muted scroll nav_item" href="#skills">
+          <a class="text-muted scroll nav_item" href="#content_skill" data-toggle="collapse">
             <i class="fa fa-sliders nav_item" style="font-size:48px;color:white"></i>
             <h5 class="text-white h4">My Skills.</h5>
           </a>
         </div>
         <div class=" p-4 col-3 text-center">
-          <a class="text-muted scroll" href="#skills">
+          <a class="text-muted scroll" href="#content_cv" data-toggle="collapse">
             <i class="fa fa-list-alt nav_item" style="font-size:48px;color:white"></i>
-            <h5 class="text-white h4">My CV.</h5>
+            <h5 class="text-white h4">My Experiences.</h5>
           </a>
         </div>
         <div class="bg-dark p-4 col-3 text-center">
-          <a class="text-muted scroll" href="#skills">
+          <a class="text-muted scroll" href="#content_interest" data-toggle="collapse">
             <i class="fa fa-heart nav_item" style="font-size:48px;color:white"></i>
-            <h5 class="text-white h4">My interests.</h5>
+            <h5 class="text-white h4">My Interests.</h5>
           </a>
         </div>
       </div>
 
     </div>
-
   </div>
-  <!-- Header -->
-  <div id="header" class="container-fluid">
-    
-    <div class="text-white text-center" style="height: 100%; padding-top: 10%; padding-right: 0%;">
-      <h1 style="font-size: 100px;">
-        Oliver Schmitt
-      </h1>
-      <hr style="width: 50%; background-color: #FFFFFF; height: 5px;">
-      <h2 style="font-size: 50px; font-family: Alegreya Sans;">
-        Web Developer<br>&<br>Media Engineer
-      </h2>
-      <div class="pt-5" style="height: 20%; margin-top: 5%;">
-        <a href="#content_disclaimer" class="button scroll"><span><i class="fa fa-chevron-circle-down"
-              style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
+
+
+  <!-- Headline -->
+  <div id="headline" class="container-fluid h-100 pt-5">
+    <div class="row" style="height: 10%;">
+    </div>
+    <div class="row pt-5" style="height: 70%;">
+      <div class="col-lg-1 col-md-0 "></div>
+      <div class="col-lg-10 col-md-12 col-sm-12 p-4 text-white">
+        <h1>
+          Oliver Schmitt
+        </h1>
+        <hr style="width: 50%; background-color: #FFFFFF; height: 5px;">
+        <h2 style="font-family: Alegreya Sans;">
+          Web Developer<br>&<br>Media Engineer
+        </h2>
       </div>
-
-
-
+      <div class="col-lg-1 col-md-0 col-sm-0"></div>
+    </div>
+    <div class="row" style="height: 20%;">
+      <div class="col-2"></div>
+      <div class="col-8 ">
+        <a href="#content_disclaimer" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
+              style="position:relative; font-size: 60px; color:white"></i></span></a>
+      </div>
+      <div class="col-2"> </div>
     </div>
 
+
+
+   
   </div>
 
-  <div class="container-fluid radial_bg_white " style="padding-top: 5%; height:100%; align-items: center;"
-    id="content_disclaimer">
+
+
+  <!-- Disclaimer-->
+  <div class="container-fluid radial_bg_white h-100 pt-5" id="content_disclaimer">
+     <!-- Header -->
     <div class="row" style="height: 20%;">
-      <!-- Interests -->
-      <div class="col-md-4 col-sm-0"></div>
-      <div class="col-md-4 col-sm-12 p-4">
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
+      <div class="col-lg-6 col-md-8 col-sm-12 p-4">
         <h2 class="info_header_inverse">
           Disclaimer:
         </h2>
       </div>
-      <div class="col-md-4 col-sm-0"></div>
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
     </div>
+     <!-- Content -->
     <div class="row pt-4" style="height: 60%;">
-
-      <div class="col-md-2 col-sm-2"></div>
-      <div class="col-md-8 col-sm-8">
+      <div class="col-lg-2 col-md-0 col-sm-0"></div>
+      <div class="col-lg-8 col-md-12 col-sm-12">
         <h3 style="color:#16306b;">
-          I'm just getting started with this project, so please excuse unfinished sections and missing device optimization.<br><br>Thank you!</h3>
+          I'm just getting started with this project, so please excuse unfinished sections and missing device
+          optimization.<br><br>Thank you!</h3>
         </h3>
-
       </div>
-      <div class="col-md-2 col-sm-2">
+      <div class="col-lg-2 col-md-0 col-sm-0">
       </div>
     </div>
+     <!-- Footer -->
     <div class="row" style="height: 20%;">
-      <!-- Info1 -->
       <div class="col-2"></div>
-
       <div class="col-8 ">
-
         <a href="#content_about" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
-              style="position:relative; font-size: 60px; color:#16306b" ></i></span></a>
+              style="position:relative; font-size: 60px; color:#16306b"></i></span></a>
       </div>
-
       <div class="col-2"> </div>
     </div>
   </div>
 
 
   <!-- About -->
-  <div class="container-fluid radial_bg_blue " style="padding-top: 5%; height:100%; align-items: center;"
-    id="content_about">
-    <div class="row" style="height: 30%;">
-      <!-- Info1 -->
-      <div class="col-md-4 col-sm-2"></div>
-      <div class="col-md-4  col-sm-8 p-4">
+  <div class="container-fluid radial_bg_blue h-100 pt-5" id="content_about">
+    <!-- Header -->
+    <div class="row" style="height: 20%;">
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
+      <div class="col-lg-6 col-md-8  col-sm-12 p-4">
         <h2 class="info_header">
           About Me.
         </h2>
       </div>
-      <div class="col-md-4 col-sm-2"></div>
+      <div class="col-lg-3 col-md-8 col-sm-0"></div>
     </div>
-    <div class="row" style="height: 50%;">
-      <div class="col-md-2 col-sm-0"></div>
-      <div class="col-md-8  col-sm-12 p-4">
+    <!-- Content -->
+    <div class="row" style="height: 60%;">
+      <div class="col-lg-2 col-md-0 col-sm-0"></div>
+      <div class="col-lg-8 col-md-12 col-sm-12">
         <h3 class="p-4 text-white">I'm a media student from Germany,
           specializing in digital creativity, UI/UX design and web development.
         </h3>
       </div>
-      <div class="col-md-2 col-sm-0">
+      <div class="col-lg-2 col-md-0 col-sm-0">
       </div>
     </div>
+    <!-- Footer -->
     <div class="row pt-4" style="height: 20%;">
-      <!-- Info1 -->
       <div class="col-2"></div>
       <div class="col-8 ">
-        <a href="#content_skill" class="pt-4 button scroll"><span><i id="scrollToSkills" class="fa fa-chevron-circle-down"
-              style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
+        <a href="#content_skill" class="pt-4 button scroll"><span><i id="scrollToSkills"
+              class="fa fa-chevron-circle-down" style="position:relative;color:white; font-size: 60px;"
+              href=></i></span></a>
       </div>
       <div class="col-2"> </div>
     </div>
   </div>
+
+
+
   <!-- Skills -->
   <div class="container-fluid radial_bg_white " style="padding-top: 5%; height:100%; align-items: center;"
     id="content_skill">
+    <!-- Header -->
     <div class="row" style="height: 20%;">
-      <!-- Info1 -->
-      <div class="col-md-4 col-sm-2"></div>
-      <div class="col-md-4  col-sm-8 p-4">
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
+      <div class="col-lg-6 col-md-8  col-sm-12 p-4">
         <h2 class="info_header_inverse">
           My Skills.
         </h2>
       </div>
-      <div class="col-md-4 col-sm-2"></div>
+      <div class="col-lg-3 col-md-2 d-none d-md-block"></div>
     </div>
-    <div class="row pt-4" style="height: 60%;">
 
-      <div class="col-2 "></div>
-      <div class="col-8 ">
+    <!-- Content -->
+    <div class="row pt-4" style="height: 60%;">
+      <div class="col-lg-2 col-md-0 d-none d-md-block"></div>
+      <div class="col-lg-8 col-md-12 col-sm-12">
         <!-- Skill 1 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
-            <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <h4 class="">Office 365</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Very Good</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
         <!-- Skill 2 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">Java</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Good</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
         <!-- Skill 4 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">HTML, CSS</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7  skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Good</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
-         <!-- Skill 3 -->
-         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+        <!-- Skill 3 -->
+        <div class="skill row ">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4>JavaScript</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7  skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
         <!-- Skill 5 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">Python</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7  skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
 
         <!-- Skill 6 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">SQL</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7  skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Basic</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
         <!-- Skill 7 -->
         <div class="skill row ">
-          <div class="col-md-2 skill_icon">
+          <div class="col-sm-3 col-md-3 col-lg-3 skill_icon">
             <!--<i class="fa fa-java" style="font-size:40px;"></i>-->
             <h4 class="">React</h4>
           </div>
-          <div class="col-md-8 skill_progress">
+          <div class="col-sm-7 col-md-7 col-lg-7 skill_progress">
             <div class="progress" style="height: 20px">
               <div class="progress-bar blue progress-bar-striped progress-bar-animated" role="progressbar"
                 style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Beginner</div>
             </div>
           </div>
-          <div class="col-md-10"></div>
+          <div class="col-sm-2 col-md-2 col-lg-2"></div>
         </div>
       </div>
       <div class="col-2 ">
       </div>
     </div>
+    <!-- Footer -->
     <div class="row" style="height: 20%;">
       <div class="col-2"></div>
-
       <div class="col-8 ">
-
         <a href="#content_cv" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
               style="position:relative; font-size: 60px; color:#16306b" href=></i></span></a>
       </div>
@@ -351,50 +356,51 @@
   <!-- Education -->
   <div class="container-fluid radial_bg_blue " style="padding-top: 5%; height:100%; align-items: center;"
     id="content_cv">
-    <div class="row" style="height: 15%;">
-      <!-- Info1 -->
-      <div class="col-md-4 col-sm-2"></div>
-      <div class="col-md-4  col-sm-8 p-4">
+    <!-- Header -->
+    <div class="row" style="height: 20%;">
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
+      <div class="col-lg-6 col-md-8  col-sm-12 p-4">
         <h2 class="info_header">
-          My Education.
+          My Projects.
         </h2>
       </div>
-      <div class="col-md-4 col-sm-2"></div>
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
     </div>
-    <div class="row" style="height: 65%;">
-      <!-- Info1 -->
-      <div class="col-md-2 col-sm-0"></div>
-      <div class="col-sm-12 col-md-8  pt-4">
-        <div class="p-4">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label id="btn_education" class="btn btn-warning active" >
-              <input type="radio" name="options" id="btn_education" autocomplete="off" checked>
-              <h5>Education</h5>
-            </label>
-            <label id="btn_projects" class="btn btn-warning">
-              <input type="radio" name="options" id="btn_projects" autocomplete="off">
-              <h5>Projects</h5>
-            </label>
+ <!-- Content -->
+    <div class="row pt-4" style="height: 60%;">
+      <div class="col-lg-2 col-d-0 d-none d-md-block"></div>
+      <div class="col-lg-8 col-md-12 col-sm-12 ">
+        <div class="btn-group btn-group-toggle pb-2" data-toggle="buttons">
+          <label id="btn_education" class="text-white btn btn-warning active">
+            <input type="radio" name="options" id="btn_education" autocomplete="off" checked>
+            <h5>Education</h5>
+          </label>
+          <label id="btn_projects" class="text-white btn btn-warning">
+            <input type="radio" name="options" id="btn_projects" autocomplete="off">
+            <h5>Experience</h5>
+          </label>
         </div>
+         <!-- Education -->
         <div id="education">
           <h5 class="text-white">
             Master of Arts: Media Culture & Economics (2018-2020)
           </h5>
           <h6 class="text-white">
-            exp. Final Mark: 1,5 <br>
-            Master Thesis: Human-AI-Collaboration for Creative Writing <br>
-            Focus: Media Informatics, Digital Marketing, Data Science
+            <b>exp. Final Mark:</b> 1,3 <br>
+            <b>Master Thesis:</b> Human-AI-Collaboration for Creative Writing <br>
+            <b>Focus:</b> Media Informatics, Digital Marketing, Data Science
           </h6>
           <br>
           <h5 class="text-white">
             Bachelor of Engineering: Media Engineering (2015-2018)
           </h5>
-          <h6 class="text-white">
-            Final Mark: 1,4 <br>
-            Bachelor Thesis: Development of a web application for multi-streaming <br>
-            Focus: Multimedia Applications, Human-Computer Interaction, Audio-/Video-Technology
+          <h6 class="text-white"> 
+            <b>Final Mark:</b> 1,4 <br>
+            <b>Master Thesis:</b> Development of a web application for multi-streaming <br>
+            <b>Focus:</b> Multimedia Applications, Human-Computer Interaction, Audio-/Video-Technology
           </h6>
         </div>
+         <!-- Experience -->
         <div id="projects" style="display: none">
           <h5 class="text-white">
             Internship: Cyprus University of Technology (2 months)
@@ -414,23 +420,19 @@
             Rapid prototyping to implement innovative ideas in the radio/media sector
           </h6>
         </div>
-
-
       </div>
-     
-
+      <div class="col-lg-2 col-md-0 col-sm-0">
+      </div>
     </div>
-    <div class="col-md-2 col-sm-0">
+ <!-- Footer -->
+    <div class="row" style="height: 20%;">
+      <div class="col-2"></div>
+      <div class="col-8 ">
+        <a href="#content_interest" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
+              style="position:relative; font-size: 60px; color:white;"></i></span></a>
+      </div>
+      <div class="col-2"> </div>
     </div>
-  </div>
-  <div class="row pt-4" style="height: 20%;">
-    <div class="col-2"></div>
-    <div class="col-8 ">
-      <a href="#content_interest" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
-            style="position:relative;color:white; font-size: 60px;" href=></i></span></a>
-    </div>
-    <div class="col-2"> </div>
-  </div>
   </div>
 
 
@@ -441,51 +443,53 @@
 
   <div class="container-fluid radial_bg_white " style="padding-top: 5%; height:100%; align-items: center;"
     id="content_interest">
+    <!-- Header -->
     <div class="row" style="height: 20%;">
-      <!-- Interests -->
-      <div class="col-md-4 col-sm-0"></div>
-      <div class="col-md-4 col-sm-12 p-4">
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
+      <div class="col-lg-6 col-md-8  col-sm-12 p-4">
         <h2 class="info_header_inverse">
           My Interests.
         </h2>
       </div>
-      <div class="col-md-4 col-sm-0"></div>
+      <div class="col-lg-3 col-md-2 col-sm-0"></div>
     </div>
+    <!-- Content -->
     <div class="row pt-4" style="height: 60%;">
-
-      <div class="col-md-1 col-sm-0"></div>
-      <div class="col-md-10 col-sm-12">
-        <h4 style="color:#16306b;">
-          <blockquote>
-            I am interested in combining <mark>modern technologies</mark> and <mark>creativity</mark> to achieve new possibilities in human-computer interaction.<br> 
-            I enjoy spending my free time in nature and I like to go <mark>hiking</mark> or do <mark>sports</mark> like soccer and volleyball. <br>
-            Otherwise I am interested in <mark>movies</mark>, <mark>books</mark> and <mark>games</mark> of different genres and with an interesting story.<br>
-            I love <mark>cooking</mark> and try to be <mark>sustainable</mark> in terms of my consumption.
-          </blockquote>
+      <div class="col-lg-1 col-d-0 d-none d-md-block"></div>
+      <div class="col-lg-10 col-md-12 col-sm-12" style="color: #16306b;">
+        <h4>
+          I am interested in combining <mark>modern technologies</mark> and <mark>creativity</mark> to achieve new
+          possibilities in human-computer interaction.
         </h4>
-
+        <h4>
+          I enjoy spending my free time in nature and I like to go <mark>hiking</mark> or do <mark>sports</mark> like
+          soccer and volleyball.
+        </h4>
+        <h4>
+          Otherwise I am interested in <mark>movies</mark>, <mark>books</mark> and <mark>games</mark> of different
+          genres and with an interesting story.
+        </h4>
+        <h4>
+          I love <mark>cooking</mark> and try to be <mark>sustainable</mark> in terms of my consumption.
+        </h4>
       </div>
-      <div class="col-md-1 col-sm-0">
+      <div class="col-lg-1 col-d-0">
       </div>
     </div>
-  
+    <!-- Footer -->
     <div class="row" style="height: 20%;">
-      <!-- Info1 -->
       <div class="col-2"></div>
-
       <div class="col-8 ">
-
         <a href="#footer" class="pt-4 button scroll"><span><i class="fa fa-chevron-circle-down"
-              style="position:relative; font-size: 60px; color:#16306b" ></i></span></a>
+              style="position:relative; font-size: 60px; color:#16306b"></i></span></a>
       </div>
-
       <div class="col-2"> </div>
     </div>
   </div>
 
 
 
-
+<!-- Footer -->
   <footer class="container-fluid " id="footer">
     <div class="row p-4 gray">
       <div class="col-md-6 col-sm-12 text-white text-center">
@@ -496,15 +500,16 @@
         <h3>Contact</h3>
         <div class="row text-center">
           <div class="col-3"></div>
-          <div class="col-2"><a href="mailto:oliver.schmitt.de@outlook.de"><i type="button" class="fa fa-envelope" style="color:white; font-size: 40px;"></i></a> </div>
-          <div class="col-2"><a href="https://www.linkedin.com/in/oliver-schmitt-de/"><i type="button" class="fa fa-linkedin" style="color:white;  font-size: 40px;"></i></a> </div>
-          <div class="col-2"><a href="https://www.xing.com/profile/Oliver_Schmitt124"><i type="button" class="fa fa-xing" style="color:white;  font-size: 40px;"></i></a> </div>
+          <div class="col-2"><a href="mailto:oliver.schmitt.de@outlook.de"><i type="button" class="fa fa-envelope"
+                style="color:white; font-size: 40px;"></i></a> </div>
+          <div class="col-2"><a href="https://www.linkedin.com/in/oliver-schmitt-de/"><i type="button"
+                class="fa fa-linkedin" style="color:white;  font-size: 40px;"></i></a> </div>
+          <div class="col-2"><a href="https://www.xing.com/profile/Oliver_Schmitt124"><i type="button"
+                class="fa fa-xing" style="color:white;  font-size: 40px;"></i></a> </div>
           <div class="col-3"></div>
         </div>
       </div>
-     
-
-      </div>
+    </div>
     </div>
   </footer>
 </body>
