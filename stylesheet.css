@@ -70,6 +70,7 @@
 
 /* Headline */
 #headline {
+  background-color: #343a46;
   background-image: url("https://user-images.githubusercontent.com/72969968/99965593-56870b80-2d95-11eb-93d1-00214f751794.jpg");
   background-size: cover;
   background-position: center right;
