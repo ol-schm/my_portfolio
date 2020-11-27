@@ -81,6 +81,14 @@
 
 
 /* Fonts & Responsive*/
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alegreya Sans'), local('Alegreya Sans'), url('./fonts/AlegreyaSans-Regular.ttf') format('truetype');
+}
+
+
 h1 {
   font-family: Bubbler One;
 }
