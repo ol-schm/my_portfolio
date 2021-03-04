@@ -1,0 +1,110 @@
+@import color
+@import media
+@import animation
+@import fonts
+
+body, html
+    height: 100%
+
+.container-fluid
+    position: relative
+    height: 100%
+    padding-top: 2em
+
+    @include breakpoint(laptop)
+        padding-top: 5em
+
+    .row
+        vertical-align: middle
+        text-align: center
+
+    .header
+        height: 10%
+        .header_text
+            align-content: center
+
+    .content
+        height: 75%
+        padding-top: 5%
+
+    .bottom
+        height: 10%
+
+@mixin inverse($bright)
+    @if $bright
+        @extend .radial_bg_white
+        .header_text
+            color: $blue
+            background-color: $orange
+            border-color: $blue
+        .scroll
+            color: $blue
+
+    @else
+        @extend .radial_bg_blue
+        .header_text
+            color: $white
+            background-color: $orange
+            border-color: $white
+        .scroll
+            color: $white
+        h4
+            color: $white
+        mark
+            background-color: rgba(0,0,0,0)
+            color: $orange
+
+#footer
+    background-color: $gray
+    height: 30%
+
+#disclaimer, #skills, #cv
+    @include inverse($bright: true)
+
+#about, #headline, #projects, #interests
+    @include inverse($bright: false)
+
+$headline_img: "../../img/headline_img.jpg"
+
+#headline
+    background-image: url($headline_img)
+    background-size: cover
+    background-position: center right
+    width: 100%
+    margin: 0
+
+.fa-chevron-circle-down, .fa-chevron-circle-up
+    font-size: 60px
+
+    @include breakpoint(mobile)
+        font-size: 40px
+    @include breakpoint(tablet)
+        font-size: 45px
+    @include breakpoint(laptop)
+        font-size: 50px
+
+.skill_progress
+    display: flex
+    justify-content: center
+    align-items: center
+    div
+        width: 100%
+
+.content_projects
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .project_container
+        width: 100%
+        height: 100%
+
+        .row
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+        img
+            max-width: 50%
+        h5
+            font-size: 20px
